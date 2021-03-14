@@ -1,0 +1,20 @@
+{
+    "courts": [
+        {
+            "id": 1,
+            "name": "Barokosport",
+            "address": "Studentski grad, Sofia, 8 December str.",
+            "description": "Baroccosport Tennis Club offers a wide variety of court floorings. Total of 12 courts, 5 of which have artificial turf, 5 hard courts and 2 red courts. For beach sports fans, there is a playground for beach volleyball, football and tennis!",
+            "image": "",
+            "courts-info": {"Artificial grass": 2, "Hard court": 5}
+        },
+        {
+            "id": 2,
+            "name": "Tennis club Levski - Sofia",
+            "address": "1164, Sofia, Borisova gradina park",
+            "description": "In the early 70s of the twentieth century a new base of TC Levski was built, which it still exists today. In 2000, an inflatable balloon was purchased, which allows year-round use of the club courts. It was made in 2008 major repairs to the stands and locker rooms and new lighting was installed, which meets all the requirements of the IP. Since 1991, the Allianz Cup women's tournament has been held at the base in the center of Sofia which over the years has featured many female tennis stars",
+            "image": "",
+            "courts-info": {"Clay court": 4}
+        }
+    ]
+}
