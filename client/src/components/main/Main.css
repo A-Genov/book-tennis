@@ -1,0 +1,43 @@
+.main-container {
+    position: relative;
+}
+
+.main-background {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.main-heading {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    font-size: 66px;
+    font-weight: 900;
+    color: rgb(25,25,25);
+    width: 38%;
+    margin: 0;
+    padding: 200px 0 80px 100px;
+}
+
+.main-button{
+    position: absolute;
+    bottom: 100px;
+    left: 16px;
+    border: 2px solid rgb(25,25,25);
+    background: transparent;
+    color: rgb(25,25,25);
+    font-size: 26px;
+    border-radius: 20px;
+    padding: 5px 30px;
+    margin: 0 0 100px 100px;
+    
+}
+
+.main-button:hover{
+    border: 3px solid rgb(25,25,25);
+    color:rgb(25,25,25);
+    font-weight: 600;
+    cursor: pointer;
+}
