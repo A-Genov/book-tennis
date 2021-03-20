@@ -1,4 +1,6 @@
-import '../header/Header.css'
+import '../header/Header.css';
+import '../navigation/NavigationItem';
+import NavigationItem from '../navigation/NavigationItem';
 
 const Header = () => {
     return (
@@ -14,12 +16,16 @@ const Header = () => {
                 </article>
                 <article>
                     <ul class="header-nav-menu">
-                        <li class="nav-menu-list"><a href="#">About</a></li>
+                        <NavigationItem>About</NavigationItem>
+                        <NavigationItem>Tennis clubs</NavigationItem>
+                        <NavigationItem>Create club</NavigationItem>
+                        <NavigationItem>Tennis news</NavigationItem>
+                        {/* <li class="nav-menu-list"><a href="#">About</a></li>
                         <li class="nav-menu-list"><a href="#">Tennis clubs</a></li>
                         <li class="nav-menu-list"><a href="#">Create club</a></li>
-                        <li class="nav-menu-list"><a href="#">Tennis news</a></li>
-                        <li class="nav-menu-list btn btn-outline-white"><a href="#">Register</a></li>
-                        <li class="nav-menu-list btn btn-fill-gradient"><a href="#">Login</a></li>
+                        <li class="nav-menu-list"><a href="#">Tennis news</a></li> */}
+                        <li class="btn btn-outline-white"><a href="#">Register</a></li>
+                        <li class="btn btn-fill-gradient"><a href="#">Login</a></li>
                     </ul>
                 </article>
             </nav>

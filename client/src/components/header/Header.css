@@ -66,6 +66,8 @@
   margin-right: 10px;
   background: transparent;
   color: white;
+  list-style: none;
+  text-decoration: none;
 }
 
 .btn-outline-white:hover {
@@ -75,11 +77,13 @@
 
 .btn-outline-white:hover a {
   color: #9fbf40;
+  text-decoration: none;
 }
 
 .btn-outline-white a,
 .btn-fill-gradient a {
   color: white;
+  text-decoration: none;
 }
 
 .btn-fill-gradient {
@@ -87,6 +91,8 @@
   box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.2);
   color: white;
   border: none;
+  list-style: none;
+  
 }
 
 .btn-fill-gradient:hover,

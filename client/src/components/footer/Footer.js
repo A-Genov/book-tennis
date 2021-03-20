@@ -1,4 +1,5 @@
-import '../footer/Footer.css'
+import '../footer/Footer.css';
+import NavigationItem from '../navigation/NavigationItem';
 
 const Footer = () => {
     return (
@@ -9,9 +10,13 @@ const Footer = () => {
             </div>
             <div>
                 <ul className="footer-menu">
-                    <li><a href="#">Tennis Clubs</a></li>
+                    <NavigationItem>Tennis Clubs</NavigationItem>
+                    <NavigationItem>Contact</NavigationItem>
+                    <NavigationItem>About</NavigationItem>
+
+                    {/* <li><a href="#">Tennis Clubs</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#">About</a></li> */}
                 </ul>
             </div>
             <div className="social-media-icons">
@@ -20,7 +25,7 @@ const Footer = () => {
                 <i class="fa fa-linkedin"></i>
                 <i class="fa fa-instagram"></i>
             </div>
-            <p>© Website made by <span><a href="https://github.com/A-Genov">A-Genov</a></span> - contact@example.com</p>
+            <p>&copy; Website made by <span><a href="https://github.com/A-Genov">A-Genov</a></span> - contact@example.com</p>
         </footer>
     );
 }
