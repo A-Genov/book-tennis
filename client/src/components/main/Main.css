@@ -41,3 +41,12 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+.court-container {
+    width: 38%;
+    padding: 50px 0 50px 50px;
+}
+
+.court-list {
+    display: flex;
+}
