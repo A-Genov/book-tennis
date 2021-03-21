@@ -2,6 +2,7 @@ import '../main/Main.css';
 import Court from '../court/Court'
 
 const Main = ({
+    
     courts
 }) => {
     return (
@@ -13,6 +14,7 @@ const Main = ({
             </section>
 
             <ul className="court-list">
+            
                 {courts.map(x =>
                     <Court
                         key={x.id}

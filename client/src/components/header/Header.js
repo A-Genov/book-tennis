@@ -15,7 +15,7 @@ const Header = () => {
                     </section>
                 </article>
                 <article>
-                    <ul class="header-nav-menu">
+                    <ul className="header-nav-menu">
                         <NavigationItem>About</NavigationItem>
                         <NavigationItem>Tennis clubs</NavigationItem>
                         <NavigationItem>Create club</NavigationItem>
@@ -24,8 +24,8 @@ const Header = () => {
                         <li class="nav-menu-list"><a href="#">Tennis clubs</a></li>
                         <li class="nav-menu-list"><a href="#">Create club</a></li>
                         <li class="nav-menu-list"><a href="#">Tennis news</a></li> */}
-                        <li class="btn btn-outline-white"><a href="#">Register</a></li>
-                        <li class="btn btn-fill-gradient"><a href="#">Login</a></li>
+                        <li className="btn btn-outline-white"><a href="#">Register</a></li>
+                        <li className="btn btn-fill-gradient"><a href="#">Login</a></li>
                     </ul>
                 </article>
             </nav>
