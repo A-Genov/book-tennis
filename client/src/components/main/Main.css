@@ -42,11 +42,10 @@
     cursor: pointer;
 }
 
-.court-container {
-    width: 38%;
-    padding: 50px 0 50px 50px;
-}
-
 .court-list {
+    padding: 50px 40px 40px 50px;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
