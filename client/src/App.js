@@ -4,6 +4,7 @@ import {Router, Switch, Route} from 'react-router-dom'
 import courtService from './services/courtService'
 
 import Header from './components/header/Header';
+import CreateClub from './components/createClub/CreateClub'
 import Main from './components/main/Main';
 import Footer from './components/footer/Footer';
 import './App.css';
@@ -40,6 +41,7 @@ class App extends Component {
             } 
           
           />
+          <Route path="/clubs/create" exact component={CreateClub}/>
         </Switch>
         {/* <Main courts={this.state.courts}/> */}
         <Footer />

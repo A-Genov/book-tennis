@@ -15,7 +15,7 @@ const Court = ({
                         <p>{address}</p>
                     </div>
                     <div>
-                        {price}
+                        {price} BGN
                     </div>
                 </section>
                 <section className="more-info">
