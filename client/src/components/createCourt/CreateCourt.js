@@ -1,10 +1,18 @@
-import '../createClub/CreateClub.css'
+import './CreateCourt.css'
+import courtService from '../../services/courtService'
 
 const CreateClub = () => {
+
+    const onCreateClubSubmitHandler = (e) => {
+        e.preventDefault();
+        const {name, address, price, description, image} = e.target;
+        courtService.create(name.value, address.value, price.value, description.value, image.value)
+    }
+
     return (
         <section className="create-form-container">
             <h2>Create New Court</h2>
-            <form>
+            <form onSubmit={onCreateClubSubmitHandler}>
                 <p>
                     <label htmlFor="name">Court Name</label>
                     <input id="name" name="name" type="text" /> 
@@ -26,7 +34,7 @@ const CreateClub = () => {
                     <input id="image" name="image" type="text" /> 
                 </p>
                 <p>
-                    <input type="submit" value="SUBMIT" id="submit" />
+                    <input type="submit" value="Create My Club" id="submit" />
                 </p>
             </form>
         </section>

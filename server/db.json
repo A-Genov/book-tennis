@@ -1,36 +1,52 @@
 {
-    "courts": [
-        {
-            "id": 1,
-            "name": "Barokosport",
-            "address": "Studentski grad, Sofia, 8 December str.",
-            "price": 35,
-            "description": "Baroccosport Tennis Club offers a wide variety of court floorings. Total of 12 courts, 5 of which have artificial turf, 5 hard courts and 2 red courts. For beach sports fans, there is a playground for beach volleyball, football and tennis!",
-            "image": "/Baroco-sport.png"
-        },
-        {
-            "id": 2,
-            "name": "Tennis club Levski - Sofia",
-            "address": "1164, Sofia, Borisova gradina park",
-            "price": 30,
-            "description": "In the early 70s of the twentieth century a new base of TC Levski was built, which it still exists today. In 2000, an inflatable balloon was purchased, which allows year-round use of the club courts. It was made in 2008 major repairs to the stands and locker rooms and new lighting was installed, which meets all the requirements of the IP. Since 1991, the Allianz Cup women's tournament has been held at the base in the center of Sofia which over the years has featured many female tennis stars",
-            "image": "/Levski-tennis.png"
-        },
-        {
-            "id": 3,
-            "name": "Park Hotel Vitosha",
-            "address": "1 Rosario str, 1700, Sofia",
-            "price": 35,
-            "description": "Grand Slam Tennis courts are hidden in the emerald embrace of VITOSHA Park Hotel garden, close to the Bar & Dinner Grand Slam. The Tennis courts are the perfect venue for a quick dose of healthy adrenalin in the open but yet far from the hustle and bustle of city life. The HAR TRU or red clay tennis courts, three in total, are professionally equipped to meet your personal training preferences. We will be glad to offer you the services of a tennis coach if needed.",
-            "image": "/Park-hotel-vitosha.png"
-        },
-        {
-            "id": 4,
-            "name": "Tennis club Levski - Sofia",
-            "address": "1164, Sofia, Borisova gradina park",
-            "price": 30,
-            "description": "In the early 70s of the twentieth century a new base of TC Levski was built, which it still exists today. In 2000, an inflatable balloon was purchased, which allows year-round use of the club courts. It was made in 2008 major repairs to the stands and locker rooms and new lighting was installed, which meets all the requirements of the IP. Since 1991, the Allianz Cup women's tournament has been held at the base in the center of Sofia which over the years has featured many female tennis stars",
-            "image": "/Levski-tennis.png"
-        }
-    ]
+  "courts": [
+    {
+      "id": 1,
+      "name": "Barokosport",
+      "address": "Studentski grad, Sofia, 8 December str.",
+      "price": 35,
+      "description": "Baroccosport Tennis Club offers a wide variety of court floorings. Total of 12 courts, 5 of which have artificial turf, 5 hard courts and 2 red courts. For beach sports fans, there is a playground for beach volleyball, football and tennis!",
+      "image": "/Baroco-sport.png"
+    },
+    {
+      "id": 2,
+      "name": "Tennis club Levski - Sofia",
+      "address": "1164, Sofia, Borisova gradina park",
+      "price": 30,
+      "description": "In the early 70s of the twentieth century a new base of TC Levski was built, which it still exists today. In 2000, an inflatable balloon was purchased, which allows year-round use of the club courts. It was made in 2008 major repairs to the stands and locker rooms and new lighting was installed, which meets all the requirements of the IP.",
+      "image": "/Levski-tennis.png"
+    },
+    {
+      "id": 3,
+      "name": "Park Hotel Vitosha",
+      "address": "1 Rosario str, 1700, Sofia",
+      "price": 35,
+      "description": "Grand Slam Tennis courts are hidden in the emerald embrace of VITOSHA Park Hotel garden, close to the Bar & Dinner Grand Slam. The Tennis courts are the perfect venue for a quick dose of healthy adrenalin in the open but yet far from the hustle and bustle of city life. The HAR TRU or red clay tennis courts, three in total, are professionally equipped to meet your personal training preferences.",
+      "image": "/Park-hotel-vitosha.png"
+    },
+    {
+      "id": 4,
+      "name": "Tennis club Levski - Sofia",
+      "address": "1164, Sofia, Borisova gradina park",
+      "price": 30,
+      "description": "In the early 70s of the twentieth century a new base of TC Levski was built, which it still exists today. In 2000, an inflatable balloon was purchased, which allows year-round use of the club courts. It was made in 2008 major repairs to the stands and locker rooms and new lighting was installed, which meets all the requirements of the IP.",
+      "image": "/Levski-tennis.png"
+    },
+    {
+      "name": "Via Tennis Star",
+      "address": "ul. \"Kukush\" 4, 1345, Sofia",
+      "price": "25",
+      "description": "Dummy description",
+      "image": "https://www.tennisdiana.com/wp-content/uploads/2019/11/clay-tennis-court.jpg",
+      "id": 5
+    },
+    {
+      "name": "Amik Sport",
+      "address": "4 Akademik Georgi Bonchev Str., 1000 Sofia",
+      "price": "29",
+      "description": "One of the most popular playgrounds in the eastern part of Sofia are those of Amik Sport. They are located behind the Arena Armeec hall. The club has two courts with artificial grass and two mini-football fields.",
+      "image": "https://www.etrichardsandsons.com.au/images/synthetic_grass/image007.jpg",
+      "id": 6
+    }
+  ]
 }

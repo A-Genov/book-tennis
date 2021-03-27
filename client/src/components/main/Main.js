@@ -22,6 +22,7 @@ const Main = ({
                         address={x.address}
                         image={x.image}
                         price={x.price}
+                        description={x.description}
                     />
                 )}
             </ul>

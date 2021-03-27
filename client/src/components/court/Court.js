@@ -4,7 +4,8 @@ const Court = ({
     name,
     address,
     image,
-    price
+    price,
+    description
 }) => {
     return (
         <li className="court">
@@ -19,7 +20,7 @@ const Court = ({
                     </div>
                 </section>
                 <section className="more-info">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                    <p>{description}</p>
                     <button>Get Details</button>
                 </section>
         </li>
