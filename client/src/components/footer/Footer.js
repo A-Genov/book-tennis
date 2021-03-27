@@ -1,4 +1,5 @@
 import '../footer/Footer.css';
+import {Link} from 'react-router-dom';
 import NavigationItem from '../navigation/NavigationItem';
 
 const Footer = () => {
@@ -10,20 +11,20 @@ const Footer = () => {
             </div>
             <div>
                 <ul className="footer-menu">
-                    <NavigationItem>Tennis Clubs</NavigationItem>
-                    <NavigationItem>Contact</NavigationItem>
-                    <NavigationItem>About</NavigationItem>
+                    {/* <NavigationItem>Tennis Clubs</NavigationItem> */}
+                    {/* <NavigationItem>Contact</NavigationItem> */}
+                    {/* <NavigationItem>About</NavigationItem> */}
 
-                    {/* <li><a href="#">Tennis Clubs</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li> */}
+                    <li><Link to="/clubs">Tennis Clubs</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/about">About</Link></li>
                 </ul>
             </div>
             <div className="social-media-icons">
-                <i class="fa fa-facebook-f"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-linkedin"></i>
-                <i class="fa fa-instagram"></i>
+                <i className="fa fa-facebook-f"></i>
+                <i className="fa fa-twitter"></i>
+                <i className="fa fa-linkedin"></i>
+                <i className="fa fa-instagram"></i>
             </div>
             <p>&copy; Website made by <span><a href="https://github.com/A-Genov">A-Genov</a></span> - contact@example.com</p>
         </footer>

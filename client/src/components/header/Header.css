@@ -24,12 +24,14 @@
     width: 100%;
 }
 
-.header-nav-logo > section > p {
+.company-name {
   font-size: 40px;
   font-weight: 700;
   color: white;
   margin: 20px;
+  text-decoration: none;
 }
+
 
 .header-nav-menu {
   display: flex;

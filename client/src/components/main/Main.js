@@ -1,8 +1,7 @@
 import '../main/Main.css';
 import Court from '../court/Court'
 
-const Main = ({
-    
+const Main = ({   
     courts
 }) => {
     return (
