@@ -11,6 +11,7 @@ const CreateClub = ({
         const {name, address, price, description, image} = e.target;
         courtService.create(name.value, address.value, price.value, description.value, image.value)
             .then(() => history.push('/'))
+            .catch(error => console.log(error))
     }
 
     return (

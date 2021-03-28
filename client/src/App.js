@@ -25,10 +25,11 @@ class App extends Component {
   componentDidMount() {
     courtService.getAll()
       .then(courts => {
-        this.setState({courts})
+        this.setState({courts: courts})
       })
       .catch(error => console.log(error))
   }
+
   
   render() {
     return (
