@@ -1,11 +1,13 @@
-import '../court/Court.css'
+import '../court/Court.css';
+import {Link} from 'react-router-dom';
 
 const Court = ({
     name,
     address,
     image,
     price,
-    description
+    description,
+    id
 }) => {
     return (
         <li className="court">
@@ -21,7 +23,8 @@ const Court = ({
                 </section>
                 <section className="more-info">
                     <p>{description}</p>
-                    <button>Get Details</button>
+                    <Link className="btn-outline-white-details" to={`/courts/details/${id}`}>Get Details</Link>
+                    <Link className="btn btn-fill-gradient" to={`/courts/book/${id}`}>Reserve Court</Link>
                 </section>
         </li>
     );

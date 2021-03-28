@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="footer-container">
             <div className="footer-logo">
                 <img src="/Tennis-Logo.png" alt="Tennis ball logo" />
-                <a href="#">Reserve tennis</a>
+                <Link to="/">Reserve tennis</Link>
             </div>
             <div>
                 <ul className="footer-menu">

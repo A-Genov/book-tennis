@@ -1,12 +1,16 @@
 import './CreateCourt.css'
 import courtService from '../../services/courtService'
 
-const CreateClub = () => {
+const CreateClub = ({
+    match,
+    history
+}) => {
 
     const onCreateClubSubmitHandler = (e) => {
         e.preventDefault();
         const {name, address, price, description, image} = e.target;
         courtService.create(name.value, address.value, price.value, description.value, image.value)
+            .then(() => history.push('/'))
     }
 
     return (

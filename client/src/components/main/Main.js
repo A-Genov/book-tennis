@@ -1,5 +1,7 @@
+import {Link} from 'react-router-dom';
+
 import '../main/Main.css';
-import Court from '../court/Court'
+import Court from '../court/Court';
 
 const Main = ({   
     courts
@@ -9,7 +11,9 @@ const Main = ({
             <section className="main-container">
                 <img src="tennis-bgr.png" className="main-background" alt="Tennis player background" />
                 <h1 className="main-heading">Wanna book the perfect court for your game?</h1>
-                <button className="main-button">Login</button>
+                {/* <button className="main-button">Login</button> */}
+                <button className="btn btn-fill-gradient"><Link to="#">Login</Link></button>
+                <button className="btn btn-outline-white"><Link to="#">Register</Link></button>
             </section>
 
             <ul className="court-list">

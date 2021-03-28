@@ -4,7 +4,9 @@ import {Router, Switch, Route} from 'react-router-dom'
 import courtService from './services/courtService'
 
 import Header from './components/header/Header';
-import CreateCourt from './components/createCourt/CreateCourt'
+import CreateCourt from './components/createCourt/CreateCourt';
+import CourtDetails from './components/courtDetails/CourtDetails';
+import BookCourt from './components/bookCourt/BookCourt';
 import Main from './components/main/Main';
 import Footer from './components/footer/Footer';
 import './App.css';
@@ -25,6 +27,7 @@ class App extends Component {
       .then(courts => {
         this.setState({courts})
       })
+      .catch(error => console.log(error))
   }
   
   render() {
@@ -42,6 +45,8 @@ class App extends Component {
           
           />
           <Route path="/courts/create" exact component={CreateCourt}/>
+          <Route path="/courts/details/:courtId" exact component={CourtDetails}/>
+          <Route path="/courts/book/:courtId" exact component={BookCourt}/>
         </Switch>
         {/* <Main courts={this.state.courts}/> */}
         <Footer />

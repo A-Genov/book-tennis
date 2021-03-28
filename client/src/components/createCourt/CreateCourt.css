@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-form {
+.create-form-container form {
     background: #fff;
     padding: 4em 4em 2em;
     max-width: 600px;
@@ -15,24 +15,25 @@ form {
     border-radius: 5px;
   }
   
-  p {
+  .create-form-container p {
     margin: 0 0 1.5em 0;
     position: relative;
   }
   
-  label {
+  .create-form-container label {
     display: block;
     font-size: 16px;
     margin: 0 0 .5em;
     color: #333;
   }
   
-  input,
-  textarea {
+  .create-form-container input,
+  .create-form-container textarea {
     display: block;
     box-sizing: border-box;
     width: 100%;
-    outline: none
+    outline: none;
+    font-family: 'Roboto', sans-serif;
   }
   
   input[type="text"],

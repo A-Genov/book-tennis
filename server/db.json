@@ -25,14 +25,6 @@
       "image": "/Park-hotel-vitosha.png"
     },
     {
-      "id": 4,
-      "name": "Tennis club Levski - Sofia",
-      "address": "1164, Sofia, Borisova gradina park",
-      "price": 30,
-      "description": "In the early 70s of the twentieth century a new base of TC Levski was built, which it still exists today. In 2000, an inflatable balloon was purchased, which allows year-round use of the club courts. It was made in 2008 major repairs to the stands and locker rooms and new lighting was installed, which meets all the requirements of the IP.",
-      "image": "/Levski-tennis.png"
-    },
-    {
       "name": "Via Tennis Star",
       "address": "ul. \"Kukush\" 4, 1345, Sofia",
       "price": "25",
@@ -47,6 +39,14 @@
       "description": "One of the most popular playgrounds in the eastern part of Sofia are those of Amik Sport. They are located behind the Arena Armeec hall. The club has two courts with artificial grass and two mini-football fields.",
       "image": "https://www.etrichardsandsons.com.au/images/synthetic_grass/image007.jpg",
       "id": 6
+    },
+    {
+      "name": "gfddfhgdf",
+      "address": "gfhfghfgh",
+      "price": "650",
+      "description": "cghfjf",
+      "image": "fjghjg",
+      "id": 7
     }
   ]
 }
