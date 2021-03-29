@@ -1,0 +1,25 @@
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    padding: 40px 0 40px 0;
+}
+
+.details-container img {
+    width: 50%;
+    padding-right: 70px;
+}
+
+.details-section p {
+    color: rgb(25,25,25);
+    font-size: 16px;
+}
+
+.details-section h2 {
+    color: #9fbf40;
+    font-size: 32px;
+    margin-top: 0;
+}

@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import {Component} from 'react';
 
 import courtService from '../../services/courtService';
+import '../bookCourt/BookCourt.css';
 
 class BookCourt extends Component {
     constructor(props) {
@@ -50,9 +51,8 @@ class BookCourt extends Component {
 
     render() {
         return(
-            <section>
-                <h2>Book Court page</h2>
-                <p>{this.state.currentCourt.name}</p>
+            <section className="booking-container">
+                <h2>{this.state.currentCourt.name} - Book Court</h2>
                 <DayTimePicker 
                     currentCourt={this.state.currentCourt}  
                     timeSlotSizeMinutes={60}

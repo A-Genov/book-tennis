@@ -1,0 +1,13 @@
+.booking-container {
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
+}
+
+.booking-container h2 {
+    color: #9fbf40;
+    font-size: 32px;
+    margin-top: 0;
+    text-align: center;
+}

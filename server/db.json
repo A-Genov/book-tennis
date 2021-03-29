@@ -9,7 +9,7 @@
       "image": "/Baroco-sport.png",
       "booked": [
         "2021-03-31T08:00:00.000Z",
-        "2021-03-30T05:00:00.000Z",
+        "2021-03-30T05:00:00.000Z"
       ]
     },
     {
@@ -19,7 +19,9 @@
       "price": 30,
       "description": "In the early 70s of the twentieth century a new base of TC Levski was built, which it still exists today. In 2000, an inflatable balloon was purchased, which allows year-round use of the club courts. It was made in 2008 major repairs to the stands and locker rooms and new lighting was installed, which meets all the requirements of the IP.",
       "image": "/Levski-tennis.png",
-      "booked": []
+      "booked": [
+        "2021-03-31T07:00:00.000Z"
+      ]
     },
     {
       "id": 3,
@@ -28,7 +30,9 @@
       "price": 35,
       "description": "Grand Slam Tennis courts are hidden in the emerald embrace of VITOSHA Park Hotel garden, close to the Bar & Dinner Grand Slam. The Tennis courts are the perfect venue for a quick dose of healthy adrenalin in the open but yet far from the hustle and bustle of city life. The HAR TRU or red clay tennis courts, three in total, are professionally equipped to meet your personal training preferences.",
       "image": "/Park-hotel-vitosha.png",
-      "booked": []
+      "booked": [
+        "2021-03-31T11:00:00.000Z"
+      ]
     },
     {
       "name": "Via Tennis Star",

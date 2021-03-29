@@ -23,7 +23,7 @@ const Header = (props) => {
                         {/* <NavigationItem>Tennis news</NavigationItem> */}
                         <li className="nav-menu-list"><Link to="/about">About</Link></li>
                         <li className="nav-menu-list"><Link to="/news">Tennis news</Link></li>
-                        <li className="nav-menu-list"><Link to="/clubs">Tennis clubs</Link></li>
+                        <li className="nav-menu-list"><Link to="/courts">Tennis clubs</Link></li>
                         <li className="nav-menu-list"><Link to="/courts/create">Create club</Link></li>
                         <li className="btn btn-outline-white"><Link to="#">Register</Link></li>
                         <li className="btn btn-fill-gradient"><Link to="#">Login</Link></li>

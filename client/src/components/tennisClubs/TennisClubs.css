@@ -1,0 +1,13 @@
+.court-list {
+    padding: 50px 40px 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.clubs-container h2 {
+    color: #9fbf40;
+    font-size: 32px;
+    text-align: center;
+}

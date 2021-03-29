@@ -15,6 +15,7 @@ const Main = ({
                 <button className="btn btn-fill-gradient"><Link to="#">Login</Link></button>
                 <button className="btn btn-outline-white"><Link to="#">Register</Link></button>
             </section>
+              
 
             <ul className="court-list">
             
@@ -31,8 +32,8 @@ const Main = ({
                 )}
             </ul>
 
-
-        </main>
+        </main>  
+        
     );
 }
 

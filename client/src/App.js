@@ -3,14 +3,15 @@ import {Router, Switch, Route} from 'react-router-dom'
 
 import courtService from './services/courtService'
 
+import './App.css';
 import Header from './components/header/Header';
 import CreateCourt from './components/createCourt/CreateCourt';
 import CourtDetails from './components/courtDetails/CourtDetails';
 import BookCourt from './components/bookCourt/BookCourt';
 import Main from './components/main/Main';
 import Footer from './components/footer/Footer';
-import './App.css';
 import About from './components/about/About';
+import TennisClubs from './components/tennisClubs/TennisClubs';
 
 class App extends Component {
 
@@ -40,11 +41,20 @@ class App extends Component {
           <Route 
             path="/" 
             exact
-            render={() => 
-              <Main courts={this.state.courts} />
+            render={(props) => 
+              <Main {...props} courts={this.state.courts} />
             } 
           
           />
+          <Route 
+            path="/courts" 
+            exact
+            render={(props) => 
+              <TennisClubs {...props} courts={this.state.courts} />
+            } 
+          
+          />
+
           <Route path="/courts/create" exact component={CreateCourt}/>
           <Route path="/courts/details/:courtId" exact component={CourtDetails}/>
           <Route path="/courts/book/:courtId" exact component={BookCourt}/>

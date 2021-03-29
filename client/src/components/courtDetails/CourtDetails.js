@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import courtService from '../../services/courtService';
+import '../courtDetails/CourtDetails.css';
 
 class CourtDetails extends Component {
     constructor(props) {
@@ -22,13 +23,17 @@ class CourtDetails extends Component {
 
     render() {
         return(
-            <section>
-                <h2>Details page</h2>
-                <p>{this.state.currentCourt.name}</p>
-            </section>
+            <article className="details-container">
+                <img src={this.state.currentCourt.image} alt="" />
+                <section className="details-section">
+                    <h2>{this.state.currentCourt.name} - Detailed information</h2>
+                    <p>{this.state.currentCourt.description}</p>
+                    
+                </section>
+            </article>
+        
         );
     }
-    
 }
 
 export default CourtDetails;
