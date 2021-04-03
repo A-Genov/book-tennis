@@ -25,8 +25,8 @@ const Header = (props) => {
                         <li className="nav-menu-list"><Link to="/news">Tennis news</Link></li>
                         <li className="nav-menu-list"><Link to="/courts">Tennis clubs</Link></li>
                         <li className="nav-menu-list"><Link to="/courts/create">Create club</Link></li>
-                        <li className="btn btn-outline-white"><Link to="#">Register</Link></li>
-                        <li className="btn btn-fill-gradient"><Link to="#">Login</Link></li>
+                        <li className="btn btn-outline-white"><Link to="/register">Register</Link></li>
+                        <li className="btn btn-fill-gradient"><Link to="/login">Login</Link></li>
                     </ul>
                 </article>
             </nav>

@@ -8,8 +8,11 @@
       "description": "Baroccosport Tennis Club offers a wide variety of court floorings. Total of 12 courts, 5 of which have artificial turf, 5 hard courts and 2 red courts. For beach sports fans, there is a playground for beach volleyball, football and tennis!",
       "image": "/Baroco-sport.png",
       "booked": [
-        "2021-03-31T08:00:00.000Z",
-        "2021-03-30T05:00:00.000Z"
+        "2021-04-10T07:00:00.000Z",
+        "2021-04-10T08:00:00.000Z",
+        "2021-04-10T10:00:00.000Z",
+        "2021-04-10T11:00:00.000Z",
+        "2021-04-12T06:00:00.000Z"
       ]
     },
     {
@@ -41,7 +44,14 @@
       "description": "Dummy description",
       "image": "https://www.tennisdiana.com/wp-content/uploads/2019/11/clay-tennis-court.jpg",
       "id": 5,
-      "booked": []
+      "booked": [
+        "2021-04-21T07:00:00.000Z",
+        "2021-04-07T05:00:00.000Z",
+        "2021-04-07T11:00:00.000Z",
+        "2021-04-08T05:00:00.000Z",
+        "2021-04-14T08:00:00.000Z",
+        "2021-04-14T14:00:00.000Z"
+      ]
     },
     {
       "name": "Amik Sport",
@@ -50,7 +60,29 @@
       "description": "One of the most popular playgrounds in the eastern part of Sofia are those of Amik Sport. They are located behind the Arena Armeec hall. The club has two courts with artificial grass and two mini-football fields.",
       "image": "https://www.etrichardsandsons.com.au/images/synthetic_grass/image007.jpg",
       "id": 6,
-      "booked": []
+      "booked": [
+        "2021-04-10T05:00:00.000Z",
+        "2021-04-10T07:00:00.000Z",
+        "2021-04-10T17:00:00.000Z"
+      ]
+    },
+    {
+      "name": "Sveti Yoan Sports Complex",
+      "address": "pl. \"Velchova zavera\" 2, Borisova gradina",
+      "price": "24",
+      "description": "Tennis Club St. John is located in the yard of the Sofia Theological Seminary in Borisova Garden.\nWe have 6 red-clay courts, six of which are illuminated. During the winter season, three of the courts are covered with a balloon. The place is quiet and peaceful and extremely pleasant for tennis. The club has a dressing room sauna and a sports bar cafe, where you can enjoy your favorite game undisturbed.",
+      "image": "https://blog.betzcenter.com/wp-content/uploads/2018/05/Tennis-Ball-on-a-Red-Clay-Court.jpg",
+      "booked": [],
+      "id": 7
+    },
+    {
+      "name": "sdfdsf",
+      "address": "dgdfgdfgdh",
+      "price": "11",
+      "description": "fdsgfdg",
+      "image": "hfghfh",
+      "booked": [],
+      "id": 8
     }
   ]
 }

@@ -23,29 +23,51 @@ class BookCourt extends Component {
         .catch(error => console.log(error))
     }
 
-    timeSlotValidator(slotTime) {
-    const eveningTime = new Date(
-      slotTime.getFullYear(),
-      slotTime.getMonth(),
-      slotTime.getDate(),
-      7,
-      0,
-      0
-    );
 
-    const isValid = slotTime.getTime() > eveningTime.getTime();
-    return isValid;
+    timeSlotValidator = (slotTime) => {
+        // console.log(this.state.currentCourt.booked[0]);
+        let timeValidation = [];
+        this.state.currentCourt.booked.map(
+            x => {
+                let bookedTime = new Date(x)
+                console.log(bookedTime);
+                console.log(slotTime.getTime());
+                const isValid = slotTime.getTime() != bookedTime.getTime();
+                timeValidation.push(isValid)
+            }
+
+        )
+
+        return timeValidation[3]
 
     }
 
+        // timeSlotValidator(slotTime) {
+    // const eveningTime = new Date(
+    //   slotTime.getFullYear(),
+    //   slotTime.getMonth(),
+    //   slotTime.getDate(),
+    //   7,
+    //   0,
+    //   0
+    // );
+// 
+    // const isValid = slotTime.getTime() > eveningTime.getTime();
+    // return isValid;
+// 
+    // }
+
     handleScheduled = dateTime => {
         // console.log('scheduled: ', dateTime);
-        // console.log(this.props.match.params.courtId);
-        this.state.currentCourt.booked.push(dateTime);
-        courtService.book(this.props.match.params.courtId, this.state.currentCourt.booked)
-        // .then((res) => {
-            // console.log(res);
-        // })
+        const isBooked = this.state.currentCourt.booked.includes(dateTime.toISOString());
+        if(!isBooked) {
+            this.state.currentCourt.booked.push(dateTime);
+            courtService.book(this.props.match.params.courtId, this.state.currentCourt.booked);
+            this.props.history.push('/courts');
+            
+        } else {
+            alert('This slot is not availale')
+        }
 
     };
 
