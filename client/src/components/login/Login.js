@@ -12,7 +12,9 @@ const Login = ({
         const username = e.target.username.value;
         const password = e.target.password.value;
         auth.signInWithEmailAndPassword(username, password)
-        .then((userCredential) => console.log(userCredential))
+        .then((userCredential) => {
+            history.push('/');
+        })
     }
 
     return (

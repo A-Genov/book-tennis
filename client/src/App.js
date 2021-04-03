@@ -8,6 +8,7 @@ import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
+import Register from './components/register/Register';
 import CreateCourt from './components/createCourt/CreateCourt';
 import CourtDetails from './components/courtDetails/CourtDetails';
 import BookCourt from './components/bookCourt/BookCourt';
@@ -22,17 +23,33 @@ class App extends Component {
     super(props);
     
     this.state = {
-      courts: []
+      courts: [],
+      user: null
     }
   }
 
   componentDidMount() {
+    auth.onAuthStateChanged((authUser) => {
+      if(authUser) {
+        this.setState({user: authUser})
+        console.log('Logged in');
+        
+      } else {
+        this.setState({user: null})
+        console.log('Logged out');
+      }
+    })
+
     courtService.getAll()
       .then(courts => {
         this.setState({courts: courts})
       })
       .catch(error => console.log(error))
   }
+
+  // componentDidMount() {
+    // 
+  // }
 
   
   render() {
@@ -62,6 +79,7 @@ class App extends Component {
           <Route path="/courts/details/:courtId" exact component={CourtDetails}/>
           <Route path="/courts/book/:courtId" exact component={BookCourt}/>
           <Route path="/login" exact component={Login}/>
+          <Route path="/register" exact component={Register}/>
           <Route path="/logout" render={props => {
             auth.signOut();
             return <Redirect to="/" />
