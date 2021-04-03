@@ -1,3 +1,5 @@
+import {auth} from '../../utils/firebase'
+
 import './Login.css'
 
 const Login = ({
@@ -5,18 +7,18 @@ const Login = ({
     history
 }) => {
 
-    // const onCreateClubSubmitHandler = (e) => {
-        // e.preventDefault();
-        // const {name, address, price, description, image} = e.target;
-        // courtService.create(name.value, address.value, price.value, description.value, image.value)
-            // .then(() => history.push('/courts'))
-            // .catch(error => console.log(error))
-    // }
+    const onLoginFormSubmitHandler = (e) => {
+        e.preventDefault();
+        const username = e.target.username.value;
+        const password = e.target.password.value;
+        auth.signInWithEmailAndPassword(username, password)
+        .then((userCredential) => console.log(userCredential))
+    }
 
     return (
         <section className="login-page-container">
             <h2>Login</h2>
-            <form>
+            <form onSubmit={onLoginFormSubmitHandler}>
                 <p>
                     <label htmlFor="username">Username</label>
                     <input id="username" name="username" type="text" placeholder="Insert email" /> 

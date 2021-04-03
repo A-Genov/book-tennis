@@ -27,6 +27,7 @@ const Header = (props) => {
                         <li className="nav-menu-list"><Link to="/courts/create">Create club</Link></li>
                         <li className="btn btn-outline-white"><Link to="/register">Register</Link></li>
                         <li className="btn btn-fill-gradient"><Link to="/login">Login</Link></li>
+                        <li className="btn btn-fill-gradient"><Link to="/logout">Logout</Link></li>
                     </ul>
                 </article>
             </nav>

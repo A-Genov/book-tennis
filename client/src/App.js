@@ -1,5 +1,6 @@
 import {Component} from 'react';
-import {Router, Switch, Route} from 'react-router-dom'
+import {Router, Switch, Route, Redirect} from 'react-router-dom';
+import {auth} from './utils/firebase'
 
 import courtService from './services/courtService'
 
@@ -61,6 +62,10 @@ class App extends Component {
           <Route path="/courts/details/:courtId" exact component={CourtDetails}/>
           <Route path="/courts/book/:courtId" exact component={BookCourt}/>
           <Route path="/login" exact component={Login}/>
+          <Route path="/logout" render={props => {
+            auth.signOut();
+            return <Redirect to="/" />
+          }}/>
         </Switch>
         {/* <Main courts={this.state.courts}/> */}
         <Footer />
