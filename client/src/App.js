@@ -1,6 +1,6 @@
-import {Component} from 'react';
-import {Router, Switch, Route, Redirect} from 'react-router-dom';
-import {auth} from './utils/firebase'
+import { Component } from 'react';
+import { Router, Switch, Route, Redirect } from 'react-router-dom';
+import { auth } from './utils/firebase'
 
 import courtService from './services/courtService'
 
@@ -21,7 +21,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    
+
     this.state = {
       courts: [],
       user: null
@@ -29,67 +29,74 @@ class App extends Component {
   }
 
   componentDidMount() {
+    this._isMounted = true;
     auth.onAuthStateChanged((authUser) => {
-      if(authUser) {
-        this.setState({user: authUser})
-        console.log('Logged in');
-        
+      if (authUser) {
+        if (this._isMounted) {
+          this.setState({ user: authUser })
+          // console.log('Logged in');
+        }
+
       } else {
-        this.setState({user: null})
-        console.log('Logged out');
+        if (this._isMounted) {
+          this.setState({ user: null })
+          // console.log('Logged out');
+
+        }
       }
     })
 
     courtService.getAll()
       .then(courts => {
-        this.setState({courts: courts})
+        this.setState({ courts: courts })
       })
       .catch(error => console.log(error))
   }
 
-  // componentDidMount() {
-    // 
-  // }
-
-  
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route path="/about" exact component={About}/>
-          <Route 
-            path="/" 
-            exact
-            render={(props) => 
-              <Main {...props} courts={this.state.courts} />
-            } 
-          
-          />
-          <Route 
-            path="/courts" 
-            exact
-            render={(props) => 
-              <TennisClubs {...props} courts={this.state.courts} />
-            } 
-          
-          />
-
-          <Route path="/courts/create" exact component={CreateCourt}/>
-          <Route path="/courts/details/:courtId" exact component={CourtDetails}/>
-          <Route path="/courts/book/:courtId" exact component={BookCourt}/>
-          <Route path="/login" exact component={Login}/>
-          <Route path="/register" exact component={Register}/>
-          <Route path="/logout" render={props => {
-            auth.signOut();
-            return <Redirect to="/" />
-          }}/>
-        </Switch>
-        {/* <Main courts={this.state.courts}/> */}
-        <Footer />
-      </div>
-    );
+  componentWillUnmount() {
+    this._isMounted = false;
   }
+
+
+render() {
+  return (
+    <div className="App">
+      <Header isAuthenticated={Boolean(this.state.user)}/>
+      <Switch>
+        <Route path="/about" exact component={About} />
+        <Route
+          path="/"
+          exact
+          render={(props) =>
+            <Main {...props} courts={this.state.courts} />
+          }
+
+        />
+        <Route
+          path="/courts"
+          exact
+          render={(props) =>
+            <TennisClubs {...props} courts={this.state.courts} />
+          }
+
+        />
+
+        <Route path="/courts/create" exact component={CreateCourt} />
+        <Route path="/courts/details/:courtId" exact component={CourtDetails} />
+        <Route path="/courts/book/:courtId" exact component={BookCourt} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/register" exact component={Register} />
+        <Route path="/logout" render={(props) => {
+          auth.signOut()
+            .then(() => props.history.push("/"))
+            .catch((error) => console.log(error))
+          
+        }} />
+      </Switch>
+      <Footer />
+    </div>
+  );
+}
 }
 
 export default App;

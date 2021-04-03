@@ -9,8 +9,10 @@ const getAll = () => {
 }
 
 const getOne = (courtId) => {
-    return fetch(`${api.courts}/${courtId}`)
+    // console.log(`${api.base}/courts/${courtId}.json`);
+    return fetch(`${api.base}/courts/${courtId}.json`)
         .then(res => res.json())
+        // .then((data) => console.log(data))
         .catch(error => console.log(error))
 }
 
@@ -35,7 +37,7 @@ const create = (name, address, price, description, image) => {
 }
 
 const book = (courtId, scheduledTime) => {
-    return fetch(`${api.courts}/${courtId}`, {
+    return fetch(`${api.base}/courts/${courtId}.json`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json'

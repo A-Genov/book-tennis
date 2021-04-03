@@ -26,7 +26,7 @@ const Footer = () => {
                 <i className="fa fa-linkedin"></i>
                 <i className="fa fa-instagram"></i>
             </div>
-            <p>&copy; Website made by <span><a href="https://github.com/A-Genov">A-Genov</a></span> - contact@example.com</p>
+            <p>&copy; Website made by <span><Link to="https://github.com/A-Genov">A-Genov</Link></span> - contact@example.com</p>
         </footer>
     );
 }

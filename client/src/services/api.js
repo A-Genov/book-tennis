@@ -1,5 +1,6 @@
-const baseUrl = 'http://localhost:5000';
+const baseUrl = 'https://book-tennis-sofia-default-rtdb.europe-west1.firebasedatabase.app';
 
 export default {
-    courts: `${baseUrl}/courts`,
+    courts: `${baseUrl}/courts/.json`,
+    base: `${baseUrl}`
 }

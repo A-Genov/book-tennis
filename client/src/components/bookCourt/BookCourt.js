@@ -27,6 +27,7 @@ class BookCourt extends Component {
     timeSlotValidator = (slotTime) => {
         // console.log(this.state.currentCourt.booked[0]);
         let timeValidation = [];
+        if(this.state.currentCourt.booked) {
         this.state.currentCourt.booked.map(
             x => {
                 let bookedTime = new Date(x)
@@ -37,6 +38,7 @@ class BookCourt extends Component {
             }
 
         )
+        }
 
         return timeValidation[3]
 
@@ -59,6 +61,11 @@ class BookCourt extends Component {
 
     handleScheduled = dateTime => {
         // console.log('scheduled: ', dateTime);
+        if(!this.state.currentCourt.booked) {
+            this.state.currentCourt.booked = []
+        }
+
+        console.log(this.state.currentCourt.booked);
         const isBooked = this.state.currentCourt.booked.includes(dateTime.toISOString());
         if(!isBooked) {
             this.state.currentCourt.booked.push(dateTime);
@@ -78,7 +85,7 @@ class BookCourt extends Component {
                 <DayTimePicker 
                     currentCourt={this.state.currentCourt}  
                     timeSlotSizeMinutes={60}
-                    timeSlotValidator={this.timeSlotValidator}
+                    // timeSlotValidator={this.timeSlotValidator}
                     onConfirm={this.handleScheduled}
                 />
                 

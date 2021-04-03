@@ -7,8 +7,8 @@ import api from '../../services/api';
 
 const TennisClubs = ({
     courts
+    
 }) => {
-
     const [court, setCourt] = useState(courts);
 
     useEffect(() => {
@@ -24,15 +24,15 @@ const TennisClubs = ({
 
             <ul className="court-list">
 
-                {courts.map(x =>
+                {Object.keys(courts).map(x =>
                     <Court
-                        key={x.id}
-                        id={x.id}
-                        name={x.name}
-                        address={x.address}
-                        image={x.image}
-                        price={x.price}
-                        description={x.description}
+                        key={x}
+                        id={x}
+                        name={courts[x].name}
+                        address={courts[x].address}
+                        image={courts[x].image}
+                        price={courts[x].price}
+                        description={courts[x].description}
                     />
                 )}
             </ul>
