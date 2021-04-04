@@ -15,7 +15,7 @@ const Footer = () => {
                     {/* <NavigationItem>Contact</NavigationItem> */}
                     {/* <NavigationItem>About</NavigationItem> */}
 
-                    <li><Link to="/clubs">Tennis Clubs</Link></li>
+                    <li><Link to="/courts">Tennis Clubs</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/about">About</Link></li>
                 </ul>

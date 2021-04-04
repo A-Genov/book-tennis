@@ -65,7 +65,7 @@ class BookCourt extends Component {
             this.state.currentCourt.booked = []
         }
 
-        console.log(this.state.currentCourt.booked);
+        // console.log(this.state.currentCourt.booked);
         const isBooked = this.state.currentCourt.booked.includes(dateTime.toISOString());
         if(!isBooked) {
             this.state.currentCourt.booked.push(dateTime);

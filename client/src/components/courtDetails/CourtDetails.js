@@ -16,7 +16,6 @@ class CourtDetails extends Component {
         courtService.getOne(this.props.match.params.courtId)
           .then(currentCourt => { 
               this.setState({ currentCourt: currentCourt })
-              console.log(this.state.currentCourt.image);
           })
           .catch(error => console.log(error))
       }

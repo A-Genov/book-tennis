@@ -1,7 +1,9 @@
+
 import './CreateCourt.css'
 import courtService from '../../services/courtService';
 
 const CreateClub = ({
+    courts,
     match,
     history
 }) => {
@@ -10,7 +12,8 @@ const CreateClub = ({
         e.preventDefault();
         const {name, address, price, description, image} = e.target;
         courtService.create(name.value, address.value, price.value, description.value, image.value)
-            .then(() => history.push('/courts'))
+        .then(() => console.log(courts))    
+        .then(() => history.push('/courts'))
             .catch(error => console.log(error))
     }
 

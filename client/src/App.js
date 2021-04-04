@@ -32,17 +32,17 @@ class App extends Component {
     this._isMounted = true;
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        if (this._isMounted) {
+        // if (this._isMounted) {
           this.setState({ user: authUser })
           // console.log('Logged in');
-        }
+        // }
 
       } else {
-        if (this._isMounted) {
+        // if (this._isMounted) {
           this.setState({ user: null })
           // console.log('Logged out');
 
-        }
+        // }
       }
     })
 
@@ -53,9 +53,9 @@ class App extends Component {
       .catch(error => console.log(error))
   }
 
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
+  // componentWillUnmount() {
+    // this._isMounted = false;
+  // }
 
 
 render() {
@@ -81,7 +81,13 @@ render() {
 
         />
 
-        <Route path="/courts/create" exact component={CreateCourt} />
+
+        <Route 
+          path="/courts/create" 
+          exact 
+          render={(props) => 
+            <CreateCourt {...props} courts={this.state.courts} />
+          } />
         <Route path="/courts/details/:courtId" exact component={CourtDetails} />
         <Route path="/courts/book/:courtId" exact component={BookCourt} />
         <Route path="/login" exact component={Login} />

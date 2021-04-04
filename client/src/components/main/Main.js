@@ -12,8 +12,8 @@ const Main = ({
                 <img src="tennis-bgr.png" className="main-background" alt="Tennis player background" />
                 <h1 className="main-heading">Wanna book the perfect court for your game?</h1>
                 {/* <button className="main-button">Login</button> */}
-                <button className="btn btn-fill-gradient"><Link to="#">Login</Link></button>
-                <button className="btn btn-outline-white"><Link to="#">Register</Link></button>
+                <button className="btn btn-fill-gradient"><Link to="/login">Login</Link></button>
+                <button className="btn btn-outline-white"><Link to="/register">Register</Link></button>
             </section>
               
 

@@ -9,10 +9,8 @@ const getAll = () => {
 }
 
 const getOne = (courtId) => {
-    // console.log(`${api.base}/courts/${courtId}.json`);
     return fetch(`${api.base}/courts/${courtId}.json`)
         .then(res => res.json())
-        // .then((data) => console.log(data))
         .catch(error => console.log(error))
 }
 
