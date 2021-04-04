@@ -84,7 +84,6 @@ render() {
 
         />
 
-
         <Route 
           path="/courts/create" 
           exact 
@@ -104,7 +103,7 @@ render() {
         <Route path="/contacts" exact component={Contacts} />
       </Switch>
       <NotificationContainer />
-      <Footer />
+      <Footer isAuthenticated={Boolean(this.state.user)} />
     </div>
   );
 }

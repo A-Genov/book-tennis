@@ -1,14 +1,13 @@
 import {Link} from 'react-router-dom';
-import {useState, useEffect} from 'react'
+import {useState, useEffect} from 'react';
 
 import '../main/Main.css';
-import Court from '../court/Court';
 
 const Main = ({   
     courts,
     isAuthenticated
 }) => {
-    console.log(isAuthenticated);
+    // console.log(isAuthenticated);
     const [auth, setAuth] = useState(isAuthenticated);
 
     useEffect(() => {
@@ -32,7 +31,7 @@ const Main = ({
                     <button className="btn btn-fill-gradient"><Link to="/courts">Book</Link></button>
                 </>
                 }
-                {/* <button className="main-button">Login</button> */}
+                
             </section>
             <section className="guidelines-container">
                 <h2>Initial Tennis Guideline</h2>
@@ -61,5 +60,3 @@ const Main = ({
 }
 
 export default Main;
-
-// `url(${process.env.PUBLIC_URL)/assets/bg.jpg`

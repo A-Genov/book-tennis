@@ -3,8 +3,6 @@ import { Component } from 'react';
 import '../tennisClubs/TennisClubs.css';
 import Court from '../court/Court';
 import courtService from '../../services/courtService';
-import api from '../../services/api';
-import { render } from 'react-dom';
 
 class TennisClubs extends Component {
     constructor(props) {
@@ -23,15 +21,6 @@ class TennisClubs extends Component {
       .catch(error => console.log(error))
     }
 
-    // const [step, setStep] = useState(courts)
-    // const [court, setCourt] = useState(courts);
-// 
-    // useEffect(() => {
-        // fetch(api.courts)
-            // .then(res => res.json())
-            // .then(result => setCourt(result))
-            // .catch(err => console.log(err))
-    // }, [step])
 render() {
     return (
         <section className="clubs-container">

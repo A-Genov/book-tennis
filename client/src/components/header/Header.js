@@ -1,9 +1,6 @@
 import { Component } from 'react';
 import '../header/Header.css';
-import '../navigation/NavigationItem';
 import {Link} from 'react-router-dom';
-import NavigationItem from '../navigation/NavigationItem';
-import { render } from 'react-dom';
 
 class Header extends Component {
     constructor(props) {
@@ -25,12 +22,9 @@ render() {
                 </article>
                 <article>
                     <ul className="header-nav-menu">
-                        {/* <NavigationItem>About</NavigationItem> */}
-                        {/* <NavigationItem>Tennis clubs</NavigationItem> */}
-                        {/* <NavigationItem>Create club</NavigationItem> */}
-                        {/* <NavigationItem>Tennis news</NavigationItem> */}
+                        
                         <li className="nav-menu-list"><Link to="/about">About</Link></li>
-                        <li className="nav-menu-list"><Link to="/news">Tennis news</Link></li>
+                        
                         
                         {
                             this.props.isAuthenticated

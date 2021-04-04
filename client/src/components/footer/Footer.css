@@ -51,6 +51,10 @@ span a {
     font-size: 16px;
 }
 
+.footer-menu > li > a:hover {
+    color: white;
+}
+
 .social-media-icons {
     margin-left: 32px;
 }

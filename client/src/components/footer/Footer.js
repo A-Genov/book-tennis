@@ -1,8 +1,19 @@
+import {useState, useEffect} from 'react'
+
 import '../footer/Footer.css';
 import {Link} from 'react-router-dom';
-import NavigationItem from '../navigation/NavigationItem';
 
-const Footer = () => {
+const Footer = ({
+    isAuthenticated
+}) => {
+    // console.log(isAuthenticated);
+
+    const [auth, setAuth] = useState(isAuthenticated);
+
+    useEffect(() => {
+        setAuth(auth);
+    });
+
     return (
         <footer className="footer-container">
             <div className="footer-logo">
@@ -11,13 +22,13 @@ const Footer = () => {
             </div>
             <div>
                 <ul className="footer-menu">
-                    {/* <NavigationItem>Tennis Clubs</NavigationItem> */}
-                    {/* <NavigationItem>Contact</NavigationItem> */}
-                    {/* <NavigationItem>About</NavigationItem> */}
-
-                    <li><Link to="/courts">Tennis Clubs</Link></li>
-                    <li><Link to="/contacts">Contact</Link></li>
+                    {isAuthenticated 
+                        ? <li><Link to="/courts">Tennis Clubs</Link></li> 
+                        : ''
+                    }
+                    
                     <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contacts">Contact</Link></li>
                 </ul>
             </div>
             <div className="social-media-icons">
