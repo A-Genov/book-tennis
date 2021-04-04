@@ -1,3 +1,4 @@
+import { NotificationManager } from 'react-notifications';
 import {auth} from '../../utils/firebase'
 
 import '../login/Login'
@@ -13,10 +14,13 @@ const Register = ({
         const password = e.target.password.value;
         auth.createUserWithEmailAndPassword(username, password)
             .then((userCredential) => {
-                console.log("Registered");
                 history.push("/");
+                NotificationManager.success('You have registered successfully!', 'Successful!', 2000);
             })
-            .catch((error) => console.log(error))
+            .catch((error) => {
+                console.log(error);
+                NotificationManager.error(`${error.message}`, 'Error!');
+            })
     }
 
     return (

@@ -1,5 +1,6 @@
-import {auth} from '../../utils/firebase'
+import { NotificationManager } from 'react-notifications';
 
+import {auth} from '../../utils/firebase';
 import './Login.css'
 
 const Login = ({
@@ -15,8 +16,12 @@ const Login = ({
         auth.signInWithEmailAndPassword(username, password)
         .then((userCredential) => {
             history.push('/');
+            NotificationManager.success('You have logged in successfully!', 'Successful!', 2000);
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            console.log(error);
+            NotificationManager.error(`${error.message}`, 'Error!');
+        })
     }
 
     return (

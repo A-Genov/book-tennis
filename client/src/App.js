@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import { Router, Switch, Route, Redirect } from 'react-router-dom';
-import { auth } from './utils/firebase'
+import { auth } from './utils/firebase';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
 
 import courtService from './services/courtService'
 
@@ -101,6 +103,7 @@ render() {
         }} />
         <Route path="/contacts" exact component={Contacts} />
       </Switch>
+      <NotificationContainer />
       <Footer />
     </div>
   );
