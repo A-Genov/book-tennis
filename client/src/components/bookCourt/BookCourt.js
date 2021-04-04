@@ -1,4 +1,6 @@
 import DayTimePicker from '@mooncake-dev/react-day-time-picker';
+import { NotificationManager } from 'react-notifications';
+
 import { render } from 'react-dom';
 import {Component} from 'react';
 
@@ -71,9 +73,11 @@ class BookCourt extends Component {
             this.state.currentCourt.booked.push(dateTime);
             courtService.book(this.props.match.params.courtId, this.state.currentCourt.booked);
             this.props.history.push('/courts');
+            NotificationManager.success('Booked successfully! Enjoy the game!', 'Successful!', 2000);
             
         } else {
-            alert('This slot is not availale')
+            new Error('This slot is not availale');
+            NotificationManager.error('This slot is not availale', 'Error!');
         }
 
     };
