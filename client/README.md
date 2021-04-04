@@ -1,4 +1,4 @@
-# Getting Started with Book Tennis Sofia
+# Getting Started with Book Tennis Sofia (ReactJS Course project)
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app).
 

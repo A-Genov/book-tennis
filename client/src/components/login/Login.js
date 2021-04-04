@@ -7,6 +7,7 @@ const Login = ({
     history
 }) => {
 
+
     const onLoginFormSubmitHandler = (e) => {
         e.preventDefault();
         const username = e.target.username.value;
@@ -15,6 +16,7 @@ const Login = ({
         .then((userCredential) => {
             history.push('/');
         })
+        .catch(error => console.log(error))
     }
 
     return (

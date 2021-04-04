@@ -11,7 +11,6 @@ class Header extends Component {
     }
 
 render() {
-    console.log(this.props.isAuthenticated);
     return (
         <header className="site-header">
             <nav className="site-header-nav">
@@ -37,8 +36,8 @@ render() {
                             this.props.isAuthenticated
                             ? 
                                 <>
-                                <li className="nav-menu-list"><Link to="/courts/create">Create club</Link></li>
                                 <li className="nav-menu-list"><Link to="/courts">Tennis clubs</Link></li>
+                                <li className="nav-menu-list"><Link to="/courts/create">Create club</Link></li>
                                 <li className="btn btn-fill-gradient"><Link to="/logout">Logout</Link></li>
                                 </>
                             :

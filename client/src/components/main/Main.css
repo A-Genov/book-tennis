@@ -21,7 +21,7 @@
     padding: 200px 0 80px 100px;
 }
 
-.main-button{
+.main-button {
     position: absolute;
     bottom: 100px;
     left: 16px;
@@ -75,4 +75,38 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+}
+
+.guidelines-container {
+    margin-top: 50px;
+}
+
+.guidelines-container h2 {
+    color: #9fbf40;
+    font-size: 32px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.guidelines-container img {
+    max-width: 250px;
+    max-height: 400px;
+}
+
+.guidelines-container p {
+    color: rgb(25,25,25);
+    font-size: 16px;
+}
+
+.guidelines-container ul {
+    padding: 50px 40px 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 50px;
+}
+
+.guidelines-container li {
+    list-style: none;
+    margin-right: 50px;
 }
