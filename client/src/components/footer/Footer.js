@@ -16,7 +16,7 @@ const Footer = () => {
                     {/* <NavigationItem>About</NavigationItem> */}
 
                     <li><Link to="/courts">Tennis Clubs</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/contacts">Contact</Link></li>
                     <li><Link to="/about">About</Link></li>
                 </ul>
             </div>
@@ -26,7 +26,7 @@ const Footer = () => {
                 <i className="fa fa-linkedin"></i>
                 <i className="fa fa-instagram"></i>
             </div>
-            <p>&copy; Website made by <span><Link to="https://github.com/A-Genov">A-Genov</Link></span> - contact@example.com</p>
+            <p>&copy; Website made by <span><Link to="https://github.com/A-Genov">A-Genov</Link></span> - contact@book-tennis.com</p>
         </footer>
     );
 }

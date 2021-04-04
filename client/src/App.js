@@ -15,6 +15,7 @@ import BookCourt from './components/bookCourt/BookCourt';
 import Main from './components/main/Main';
 import About from './components/about/About';
 import TennisClubs from './components/tennisClubs/TennisClubs';
+import Contacts from './components/contacts/Contacts';
 import './utils/firebase';
 
 class App extends Component {
@@ -94,10 +95,11 @@ render() {
         <Route path="/register" exact component={Register} />
         <Route path="/logout" render={(props) => {
           auth.signOut()
-            .then(() => props.history.push("/"))
-            .catch((error) => console.log(error))
+          .then(() => props.history.push("/"))
+          .catch((error) => console.log(error))
           
         }} />
+        <Route path="/contacts" exact component={Contacts} />
       </Switch>
       <Footer />
     </div>
