@@ -18,7 +18,8 @@ const CreateClub = ({
 
         if (formIsValid) {
             courtService.create(name.value, address.value, price.value, description.value, image.value)
-                .then(() => {
+  
+            .then(() => {
                     history.push('/courts');
                     NotificationManager.success('Your court was created successfully!', 'Successful!', 2000);
                 })

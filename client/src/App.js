@@ -30,6 +30,8 @@ class App extends Component {
       user: null
     }
   }
+  
+  
 
   componentDidMount() {
     this._isMounted = true;
@@ -49,11 +51,11 @@ class App extends Component {
       }
     })
 
-    // courtService.getAll()
-      // .then(courts => {
-        // this.setState({ courts: courts })
-      // })
-      // .catch(error => console.log(error))
+    courtService.getAll()
+      .then(courts => {
+        this.setState({ courts: courts })
+      })
+      .catch(error => console.log(error))
   }
 
   // componentWillUnmount() {

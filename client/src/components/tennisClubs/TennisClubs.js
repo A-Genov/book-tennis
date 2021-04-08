@@ -1,48 +1,55 @@
 import { Component } from 'react';
+import { useState, useEffect } from 'react';
 
 import '../tennisClubs/TennisClubs.css';
 import Court from '../court/Court';
 import courtService from '../../services/courtService';
 
-class TennisClubs extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            courts: [],
-            
-          }
-    }
 
-    componentDidMount() {
+const TennisClubs = ({
+    courts,
+}) => {
+    const [currentCourts, setCourts] = useState([]);
+
+    useEffect(() => {
+        let mounted = true;
+        if (currentCourts.length) {
+            return;
+        }
+
         courtService.getAll()
-      .then(courts => {
-        this.setState({ courts: courts })
-      })
-      .catch(error => console.log(error))
+            .then(courts => {
+                if (mounted) {
+                    setCourts(courts);
+                }
+            })
+            .catch(error => console.log(error))
+            return () => mounted = false;
+        
+    }, [currentCourts]);
+
+
+        return (
+            <section className="clubs-container">
+                <h2>Tennis Clubs</h2>
+
+                <ul className="court-list">
+
+                    {Object.keys(currentCourts).map(x =>
+                        <Court
+                            key={x}
+                            id={x}
+                            name={currentCourts[x].name}
+                            address={currentCourts[x].address}
+                            image={currentCourts[x].image}
+                            price={currentCourts[x].price}
+                            description={currentCourts[x].description}
+                        />
+                    )}
+                </ul>
+            </section>
+        );
     }
 
-render() {
-    return (
-        <section className="clubs-container">
-            <h2>Tennis Clubs</h2>
-
-            <ul className="court-list">
-                
-                {Object.keys(this.state.courts).map(x =>
-                    <Court
-                        key={x}
-                        id={x}
-                        name={this.state.courts[x].name}
-                        address={this.state.courts[x].address}
-                        image={this.state.courts[x].image}
-                        price={this.state.courts[x].price}
-                        description={this.state.courts[x].description}
-                    />
-                )}
-            </ul>
-        </section>
-    );
-}
-}
 
 export default TennisClubs;
