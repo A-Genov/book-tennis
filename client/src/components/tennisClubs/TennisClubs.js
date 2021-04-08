@@ -1,5 +1,5 @@
-import { Component } from 'react';
 import { useState, useEffect } from 'react';
+import { NotificationManager } from 'react-notifications';
 
 import '../tennisClubs/TennisClubs.css';
 import Court from '../court/Court';
@@ -13,7 +13,7 @@ const TennisClubs = ({
 
     useEffect(() => {
         let mounted = true;
-        if (currentCourts.length) {
+        if (Object.keys(currentCourts).length) {
             return;
         }
 
@@ -23,7 +23,11 @@ const TennisClubs = ({
                     setCourts(courts);
                 }
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error);
+                NotificationManager.error(`${error.message}`, 'Error!');
+            })
+
             return () => mounted = false;
         
     }, [currentCourts]);
