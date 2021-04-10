@@ -7,6 +7,7 @@ import courtService from '../../services/courtService';
 import '../bookCourt/BookCourt.css';
 
 class BookCourt extends Component {
+    // _isMounted = false;
     constructor(props) {
         super(props);
 
@@ -14,14 +15,37 @@ class BookCourt extends Component {
             courts: [],
             currentCourt: {}
         }
+
+        // this.changeCourt = this.changeCourt.bind(this);
     }
 
+    // changeCourt() {
+        // if (!this.state.currentCourt.booked) {
+            // this.setState(this.state.currentCourt.booked = [])
+        // }
+    // }
+
     componentDidMount() {
+        // this._isMounted = true;
         courtService.getOne(this.props.match.params.courtId)
             .then(currentCourt => {
-                this.setState({ currentCourt: currentCourt })
+                    this.setState({ currentCourt: currentCourt })
+                
+            })
+            .then(() => {
+                if (!this.state.currentCourt.booked) {
+                    this.setState(prevState => ({currentCourt: {
+                        ...prevState.currentCourt,
+                        booked: []
+                    }}))
+                }
             })
             .catch(error => console.log(error))
+    }
+
+
+    componentWillUnmount() {
+        // this._isMounted = false;
     }
 
 
@@ -64,9 +88,12 @@ class BookCourt extends Component {
 
     handleScheduled = dateTime => {
         // console.log('scheduled: ', dateTime);
-        if (!this.state.currentCourt.booked) {
-            this.state.currentCourt.booked = []
-        }
+        // if (!this.state.currentCourt.booked) {
+            // changeCourt() {
+                // this.setState()
+            // }
+            // this.state.currentCourt.booked = []
+        // }
 
         // console.log(this.state.currentCourt.booked);
         const isBooked = this.state.currentCourt.booked.includes(dateTime.toISOString());
