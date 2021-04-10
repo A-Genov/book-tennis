@@ -12,7 +12,7 @@ const Footer = ({
 
     useEffect(() => {
         setAuth(auth);
-    });
+    }, [auth]);
 
     return (
         <footer className="footer-container">

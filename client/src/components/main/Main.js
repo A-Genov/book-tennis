@@ -12,7 +12,7 @@ const Main = ({
 
     useEffect(() => {
         setAuth(auth);
-    });
+    }, [auth]);
 
     return (
         <main>
