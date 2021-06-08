@@ -8,13 +8,25 @@ import courtService from '../../services/courtService';
 
 const TennisClubs = ({
     courts,
+    isAuthenticated,
+    history
 }) => {
+
+    console.log(isAuthenticated);
+
+    
+
     const [currentCourts, setCourts] = useState([]);
 
     useEffect(() => {
         let mounted = true;
         if (Object.keys(currentCourts).length) {
             return;
+        }
+
+        if(!isAuthenticated) {
+            NotificationManager.error('Please log in to view courts');
+            history.push('/login');
         }
 
         courtService.getAll()

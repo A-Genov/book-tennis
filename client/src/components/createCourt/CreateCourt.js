@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { NotificationManager } from 'react-notifications';
 
 import './CreateCourt.css'
@@ -6,9 +7,19 @@ import formValidator from '../../services/formValidator'
 
 const CreateClub = ({
     courts,
+    isAuthenticated,
     match,
     history
 }) => {
+
+
+
+    useEffect(() => {
+        if(!isAuthenticated) {
+        NotificationManager.error('Please log in to view courts');
+        history.push('/login');
+        }
+    });
 
     const onCreateClubSubmitHandler = (e) => {
         e.preventDefault();

@@ -81,7 +81,7 @@ render() {
           path="/courts"
           exact
           render={(props) =>
-            <TennisClubs {...props} courts={this.state.courts} />
+            <TennisClubs {...props} isAuthenticated={Boolean(this.state.user)} courts={this.state.courts} />
           }
 
         />
@@ -90,7 +90,7 @@ render() {
           path="/courts/create" 
           exact 
           render={(props) => 
-            <CreateCourt {...props} courts={this.state.courts} />
+            <CreateCourt {...props} isAuthenticated={Boolean(this.state.user)} courts={this.state.courts} />
           } />
         <Route path="/courts/details/:courtId" exact component={CourtDetails} />
         <Route path="/courts/book/:courtId" exact component={BookCourt} />

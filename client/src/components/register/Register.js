@@ -28,7 +28,7 @@ const Register = ({
             <h2>Register</h2>
             <form onSubmit={onRegisterSubmitHandler}>
                 <p>
-                    <label htmlFor="username">Username</label>
+                    <label htmlFor="username">Email</label>
                     <input id="username" name="username" type="text" placeholder="Insert email" /> 
                 </p>
                 <p>
